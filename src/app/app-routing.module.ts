@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'tab-chats',
     loadChildren: () => import('./tab-chats/tab-chats.module').then( m => m.TabChatsPageModule)
+  },
+  {
+    path: 'tab-chattemplate',
+    loadChildren: () => import('./tab-chattemplate/tab-chattemplate.module').then( m => m.TabChattemplatePageModule)
   }
 ];
 @NgModule({
