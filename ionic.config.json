@@ -1,0 +1,7 @@
+{
+  "name": "rocketchat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
