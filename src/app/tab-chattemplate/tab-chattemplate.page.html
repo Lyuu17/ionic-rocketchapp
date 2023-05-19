@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>title</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">title</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
+    <app-messagetemplate *ngFor="let msg of messages" [messages]="msg"/>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input placeholder="Message" [(ngModel)]="messageInput" #ctrl="ngModel"></ion-input>
+    <ion-button shape="round" slot="end" (click)="addmessage(1, this.messageInput, 'now')">
+      <ion-icon slot="icon-only" name="paper-plane-outline"/>
+    </ion-button>
+  </ion-item>
+</ion-footer>

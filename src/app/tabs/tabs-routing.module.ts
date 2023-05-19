@@ -12,6 +12,10 @@ const routes: Routes = [
         loadChildren: () => import('../tab-chats/tab-chats.module').then(m => m.TabChatsPageModule)
       },
       {
+        path: 'chattemplate',
+        loadChildren: () => import('../tab-chattemplate/tab-chattemplate.module').then(m => m.TabChattemplatePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/chats',
         pathMatch: 'full'
